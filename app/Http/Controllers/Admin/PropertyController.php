@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\PropertyFormRequest;
 use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Models\Option;
+use App\Models\Picture;
 
 class PropertyController extends Controller
 {
@@ -77,6 +78,7 @@ class PropertyController extends Controller
      */
     public function destroy(Property $property)
     {
+        Picture::destroy($property->pictures()->pluck('id'));
         $property->delete();
         return to_route('admin.property.index')->with('success', 'Le bien a bien été supprimé');
     }

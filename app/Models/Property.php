@@ -60,4 +60,9 @@ class Property extends Model
             $this->pictures()->createMany($pictures);
         }
     }
+
+    public function getPicture(): ?Picture
+    {
+        return $this->pictures[0] ?? null;
+    }
 }
