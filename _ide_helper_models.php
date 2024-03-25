@@ -73,9 +73,11 @@ namespace App\Models{
  * @property-read int|null $options_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Picture> $pictures
  * @property-read int|null $pictures_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Property available()
  * @method static \Illuminate\Database\Eloquent\Builder|Property newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Property newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Property query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Property recent()
  * @method static \Illuminate\Database\Eloquent\Builder|Property whereAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Property whereBedrooms($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Property whereCity($value)
